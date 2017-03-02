@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>lun bo tu</title>
+    </head>
+    <style>
+        /*所有图片不显示*/
+        .img-lbt{
+            display: none;
+        }
+        /*只显示要显示的那张*/
+        .hua-imgno1{
+            display: inline-block;
+        }
+
+        @-webkit-keyframes fadeIn {
+            0% {
+                opacity: 0.5; /*初始状态 透明度为0*/
+            }
+            50% {
+                opacity: 0.8; /*中间状态 透明度为0*/
+            }
+            100% {
+                opacity: 1; /*结尾状态 透明度为1*/
+            }
+        }
+
+        .hua-imgno1{
+        -webkit-animation-name: fadeIn; /*动画名称*/
+        -webkit-animation-duration: 0.5s; /*动画持续时间*/
+        -webkit-animation-iteration-count: 1; /*动画次数*/
+        -webkit-animation-delay: 0s; /*延迟时间*/}
+
+        /*button垂直居中，父元素设置为 relative相对定位*/
+        .img-lunbotu{
+            display: inline-block;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%)
+        }
+        /*button垂直居中,absolute相对于非static的绝对定位*/
+        /*下一张*/
+        .buttonx{
+            position: absolute;
+            right: 0;
+            top:50%;
+            transform: translateY(-50%);
+            width: 22px;
+            height: 55px;
+            opacity: 0.35;
+        }
+
+        .buttonx:hover{
+            opacity: 0.6;
+        }
+        /*上一张*/
+        .buttons{
+            position: absolute;
+            left: 0;
+            top:50%;
+            transform: translateY(-50%);
+            width: 22px;
+            height: 55px;
+            opacity: 0.35;
+        }
+
+        .buttons:hover{
+            opacity: 0.6;
+        }
+
+        /*三个圆点*/
+        /*父元素*/
+        .diandianf{
+            position: absolute;
+            bottom:10px;
+            display: inline-block;
+            right: 50%;
+            transform: translateX(50%);
+        }
+
+        .diandian{
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            /*圆形*/
+            border-radius: 50%;
+            /*背景色*/
+            background: white;
+        }
+        .hua-diandian{
+            background: red;
+        }
+    </style>
+    <body>
+        <!-- 轮播图 -->
+        <div class="img-lunbotu" data-imgs=3 data-imgno1=0>
+            <img id='id-img-0' class="img-lbt hua-imgno1" src="1_副本.jpg">
+            <img id='id-img-1' class="img-lbt" src="2_副本.jpg">
+            <img id='id-img-2' class="img-lbt" src="3_副本.jpg">
+            <button class="buttons"> < </button>
+            <button class="buttonx"> > </button>
+            <div class="diandianf" data-imgs=3 data-imgno1=0>
+                <div id='id-dian-0'class="diandian  hua-diandian"></div>
+                <div id='id-dian-1'class="diandian"></div>
+                <div id='id-dian-2'class="diandian"></div>
+            </div>
+        </div>
+        <script src=lbt.js></script>
+    </body>
+</html>
