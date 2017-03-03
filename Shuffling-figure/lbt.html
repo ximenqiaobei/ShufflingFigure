@@ -9,28 +9,30 @@
         .img-lbt{
             display: none;
         }
+
         /*只显示要显示的那张*/
         .hua-imgno1{
             display: inline-block;
         }
 
+        /*图片淡入淡出动画*/
         @-webkit-keyframes fadeIn {
             0% {
-                opacity: 0.5; /*初始状态 透明度为0*/
+                opacity: 0.5;   /*初始状态 透明度为0*/
             }
             50% {
-                opacity: 0.8; /*中间状态 透明度为0*/
+                opacity: 0.8;   /*中间状态 透明度为0*/
             }
             100% {
-                opacity: 1; /*结尾状态 透明度为1*/
+                opacity: 1;     /*结尾状态 透明度为1*/
             }
         }
 
         .hua-imgno1{
-        -webkit-animation-name: fadeIn; /*动画名称*/
-        -webkit-animation-duration: 0.5s; /*动画持续时间*/
-        -webkit-animation-iteration-count: 1; /*动画次数*/
-        -webkit-animation-delay: 0s; /*延迟时间*/}
+        -webkit-animation-name: fadeIn;             /*动画名称*/
+        -webkit-animation-duration: 0.5s;           /*动画持续时间*/
+        -webkit-animation-iteration-count: 1;       /*动画次数*/
+        -webkit-animation-delay: 0s;                /*延迟时间*/}
 
         /*button垂直居中，父元素设置为 relative相对定位*/
         .img-lunbotu{
@@ -39,6 +41,7 @@
             left: 50%;
             transform: translateX(-50%)
         }
+
         /*button垂直居中,absolute相对于非static的绝对定位*/
         /*下一张*/
         .buttonx{
@@ -51,9 +54,11 @@
             opacity: 0.35;
         }
 
+        /*鼠标悬停 透明度*/
         .buttonx:hover{
             opacity: 0.6;
         }
+
         /*上一张*/
         .buttons{
             position: absolute;
@@ -65,6 +70,7 @@
             opacity: 0.35;
         }
 
+        /*鼠标悬停 透明度*/
         .buttons:hover{
             opacity: 0.6;
         }
@@ -88,9 +94,11 @@
             /*背景色*/
             background: white;
         }
+
         .hua-diandian{
             background: red;
         }
+
     </style>
     <body>
         <!-- 轮播图 -->

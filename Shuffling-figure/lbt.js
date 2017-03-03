@@ -1,11 +1,14 @@
+//定义一个 log
 var log = function(){
     console.log.apply(console, arguments)
 }
 
+// 元素选择器
 var e = function(selector) {
     return document.querySelector(selector)
 }
 
+//删除class
 var removeClassAll = function(className) {
     var selector = '.' + className
     var elements = document.querySelectorAll(selector)
@@ -14,6 +17,7 @@ var removeClassAll = function(className) {
         e.classList.remove(className)
     }
 }
+
 
 // 绑定‘下一张按钮’ click事件
 var bindEventbuttonx = function(){
@@ -96,7 +100,6 @@ var bindEventbuttons = function() {
 //
 // 定时器
 // setInterval(code,millisec,lang)
-
 var xiayizhang = function(){
     var buttonx = e(".buttonx")
     // log('下一张 按钮 绑定成功')
